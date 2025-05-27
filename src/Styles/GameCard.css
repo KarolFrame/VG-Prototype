@@ -1,0 +1,34 @@
+.fixed-img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+  display: block;
+}
+
+.profile-img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  position: absolute;
+  bottom: -50px;
+  left: 20px;
+  border: 6px solid #232633;
+}
+
+
+.banner-container {
+  position: relative;
+  margin-bottom: 60px;
+}
+.card{
+    background-color: #313544 !important;
+}
+
+.my-button{
+  background-color: transparent;
+  border: 3px solid #313544;
+}
+
+.my-button:hover{
+  transform: scale(1.1);
+}

@@ -1,19 +1,8 @@
-export const initialStore=()=>{
-  return{
-    message: null,
-    todos: [
-      {
-        id: 1,
-        title: "Make the bed",
-        background: null,
-      },
-      {
-        id: 2,
-        title: "Do my homework",
-        background: null,
-      }
-    ],
-    videoGames: [
+import { useEffect, useState } from "react";
+import GameCard from "./GameCard";
+
+const TopGames = () =>{
+const [gameCards, setGameCards] = useState([
     {
         title: "Counter-Strike 2",
         text: "The modern evolution of the classic tactical shooter. Counter-Strike 2 brings graphical, physics, and network improvements that elevate the competitive experience while staying true to its strategic gameplay roots.",
@@ -32,22 +21,21 @@ export const initialStore=()=>{
         img: "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/2x1_NSwitch_Minecraft_image1600w.jpg",
         date: "Nov 2011"
     }
-]
-  }
+]);
+
+
+    return(<>
+    <div className="col text-start bg-widget rounded-3 text-light p-3">
+        <h4 className="mx-3"><i className="fa-solid fa-fire"></i> <span> </span>Top Games</h4>
+        <div className="d-flex gap-3 p-3">
+            {gameCards.map((game, index)=>{
+                return <GameCard
+                key={index}
+                videoGame={game}/>
+            })}
+        </div>
+    </div>
+</>)
 }
 
-
-export default function storeReducer(store, action = {}) {
-  switch(action.type){
-    case 'add_task':
-
-      const { id,  color } = action.payload
-
-      return {
-        ...store,
-        todos: store.todos.map((todo) => (todo.id === id ? { ...todo, background: color } : todo))
-      };
-    default:
-      throw Error('Unknown action.');
-  }    
-}
+export default TopGames;

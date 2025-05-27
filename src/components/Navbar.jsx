@@ -1,19 +1,22 @@
 import { Link } from "react-router-dom";
+import '.././Styles/main.css'
 
 export const Navbar = () => {
 
-	return (
-		<nav className="navbar navbar-light bg-light">
-			<div className="container">
+	return (<>
+		<nav className="navbar navbar-light bg-widget m-3 rounded-3 d-flex justify-content-between text-light">
+			<div className="d-flex justify-content-between align-items-center w-100 px-3">
 				<Link to="/">
-					<span className="navbar-brand mb-0 h1">React Boilerplate</span>
+					<h3 className="text-light text-decoration-none">
+						<i className="fa-solid fa-gamepad"></i> <span></span>VG
+					</h3>
 				</Link>
-				<div className="ml-auto">
-					<Link to="/demo">
-						<button className="btn btn-primary">Check the Context in action</button>
-					</Link>
-				</div>
+				<Link to={"/profile/" + "Karolframe"}>
+					<h5 className="mt-2 text-light text-decoration-none">
+						KarolFrame <i className="fa-solid fa-user"></i>
+					</h5>
+				</Link>
 			</div>
 		</nav>
-	);
+	</>);
 };
