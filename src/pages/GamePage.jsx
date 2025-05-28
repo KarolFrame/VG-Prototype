@@ -10,13 +10,11 @@ export const GamePage = () => {
   const videoGame = store.videoGames.find(g =>
     g.title.replace(/\s+/g, '-').toLowerCase() === title
   );
-
   return (<>
     <div className="col text-start bg-widget rounded-3 text-light p-3">
       <img src={videoGame.img} className="card-img-top fixed-img" alt="..." />
       <h2>{videoGame.title}</h2>
       <p>{videoGame.text}</p>
-
     </div>
   </>);
 };

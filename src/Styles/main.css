@@ -5,3 +5,19 @@ body{
 .bg-widget{
     background-color: #232633;
 }
+
+.ico-img {
+  height: 40px;
+  width: 40px;
+  margin-left: 10px;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+
+a:hover{
+    transform: scale(1.1);
+    color: #232633;
+}

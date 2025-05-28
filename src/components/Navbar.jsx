@@ -13,7 +13,7 @@ export const Navbar = () => {
 				</Link>
 				<Link to={"/profile/" + "Karolframe"}>
 					<h5 className="mt-2 text-light text-decoration-none">
-						KarolFrame <i className="fa-solid fa-user"></i>
+						KarolFrame <img className="ico-img rounded-5" src="https://image.api.playstation.com/cdn/UP9000/CUSA07820_00/c8GRTScuiwewlzKjs6B0vNIgEGlcaQ05.png?w=440&thumb=false" />
 					</h5>
 				</Link>
 			</div>

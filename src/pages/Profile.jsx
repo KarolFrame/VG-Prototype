@@ -8,7 +8,6 @@ export const Profile = props => {
   const { store } = useGlobalReducer()
 
   const { theId } = useParams()
-  const singleTodo = store.todos.find(todo => todo.id === parseInt(theId));
 
   return (
     <div className="container col text-start bg-widget rounded-3 p-3 text-light">
